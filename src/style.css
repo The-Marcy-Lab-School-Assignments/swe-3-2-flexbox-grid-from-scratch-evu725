@@ -17,3 +17,161 @@ img {
 }
 
 /* Add your styles below */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 30px;
+}
+
+#logo {
+  width: 120px;
+}
+
+h1, h2 {
+  font-weight: bold;
+  color: #1db954;
+}
+
+.navbar {
+  display: flex;
+  gap: 30px;
+  padding: 15px;
+}
+
+.navbar a:hover {
+  color:green;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+section {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Playlists */
+.playlists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.playlists li {
+  background-color: #000000;
+  border-radius: 8px;
+}
+
+.playlists li p {
+  color: white;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.playlists img {
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.5rem; 
+  padding-bottom: 20px;
+}
+
+/* Albums */
+.albums h2 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.album {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  list-style: none;
+  
+}
+
+.album li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 160px;
+  background-color: black;
+  border-radius: 8px;
+  width: 180px;
+}
+
+.album img {
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.album p {
+  color: white;
+  padding-left: 15px;
+}
+
+.artist {
+  font-size: 0.9rem;
+  padding-bottom: 15px;
+}
+
+.lp {
+  font-weight: bold;
+}
+
+/* Footer */
+footer p {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer a {
+  color:green;
+}
+
+
+/* Styles for screens 640px and wider */
+@media (min-width: 640px) {
+  .grid-item {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-item {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
