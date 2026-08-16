@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-text: #ffffff;
+  --color-accent: #1db954;
+  --color-black: #000000;
+  --color-dark-grey: #1e1e1e;
+}
+
 ul {
   list-style: none;
 }
@@ -17,3 +24,170 @@ img {
 }
 
 /* Add your styles below */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-black);
+  padding: 30px;
+}
+
+#logo {
+  width: 120px;
+}
+
+h1, h2 {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--color-accent);
+}
+
+/* Main */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-dark-grey);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+section {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+h2 {
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.albums-heading {
+  padding-top: 40px;
+}
+
+/* Playlists */
+.playlists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.playlists li {
+  background-color: var(--color-black);
+  border-radius: 4px;
+}
+
+.playlists figure {
+  display: flex;
+  align-items: center;
+}
+
+.playlists img {
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.playlists figcaption {
+  color: var(--color-text);
+  font-weight: bold;
+}
+
+/* Albums */
+.album {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.album li {
+  background-color: var(--color-black);
+  border-radius: 8px;
+}
+
+.album figure {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.album img {
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.album figcaption {
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.lp {
+  color: var(--color-text);
+  font-weight: bold;
+}
+
+.artist {
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer p {
+  color: var(--color-text);
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: var(--color-accent);
+}
+
+/* Styles for screens 640px and wider */
+@media (min-width: 640px) {
+  .playlists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .album {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Styles for screens 768px and wider */
+@media (min-width: 768px) {
+  .playlists {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .album {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Styles for screens 1024px and wider */
+@media (min-width: 1024px) {
+  .playlists {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .album {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
